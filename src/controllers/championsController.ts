@@ -1,25 +1,15 @@
 import { Request, Response } from 'express';
 import { ChampionModel, championSchema } from '../models/Champion';
-import { ChampionInterface } from '../interface/champion-interface';
+import { ChampionInterface } from '../interfaces/champion-interface';
+import { verifyFilter } from '../functions/verifyFilter';
 
 class championsController {
 
   async getAllChampions(req: Request, res: Response) {
     try {
-      const { championFunction } = req.query;
+      const { role, name, difficulty } = req.query;
 
-      let filter = {};
-      if (championFunction) {
-        const championFunctionString = Array.isArray(championFunction)
-        ? championFunction[0].toString()
-        : championFunction.toString();
-
-        const firstLetter = championFunctionString.charAt(0).toUpperCase(); // deixa o primerio caractere maiúsculo
-        const remainingLetters = championFunctionString.slice(1);
-        const completeFilter = firstLetter + remainingLetters;
-        filter = { championFunction: completeFilter };
-      }
-
+      const filter = verifyFilter(role, name, difficulty);
 
       const data = await ChampionModel.find(filter).sort({ name: 1 }); // ordena por ordem crescente
       return res.status(200).json(data);
@@ -50,7 +40,7 @@ class championsController {
     try {
       const champion: ChampionInterface = {
         name: req.body.name,
-        championFunction: req.body.championFunction,
+        role: req.body.role,
         difficulty: req.body.difficulty,
         history: req.body.history
       }
@@ -70,7 +60,7 @@ class championsController {
 
       const champion: ChampionInterface = {
         name: req.body.name,
-        championFunction: req.body.championFunction,
+        role: req.body.role,
         difficulty: req.body.difficulty,
         history: req.body.history
       }

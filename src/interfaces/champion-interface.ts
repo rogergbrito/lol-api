@@ -1,6 +1,6 @@
 export interface ChampionInterface {
   name: string;
-  championFunction: string;
+  role: string;
   difficulty: string;
   history?: string;
 }
