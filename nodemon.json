@@ -1,4 +1,0 @@
-{
-  "exec": "ts-node-dev ./src/app.ts",
-  "ext": "ts"
-}
