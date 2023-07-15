@@ -117,10 +117,12 @@ GET https://lol-api-six.vercel.app/api/champions?difficulty=Moderate&name=Ashe
 ```json
 [
   {
+    "_id": "64aec9d9e9f9a61bcfb51fe7",
     "name": "Ashe",
     "role": "Marksman",
     "difficulty": "Moderate",
-    "history": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people's belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands."
+    "history": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice. With her people's belief that she is the mythological hero Avarosa reincarnated, Ashe hopes to unify the Freljord once more by retaking their ancient, tribal lands.",
+    "__v": 0
   }
 ]
 
