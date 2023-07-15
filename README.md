@@ -1,6 +1,6 @@
 # API League of Legends
 
-Bem-vindo à documentação da API de League of Legends! Esta API permite que você obtenha informações sobre os campeões do jogo, filtrando-os por função (role), dificuldade (difficulty) e nome (name). Através do endpoint fornecido abaixo.
+Esta API permite que você obtenha informações sobre os campeões do jogo, filtrando-os por função (role), dificuldade (difficulty) e nome (name). Através do endpoint fornecido abaixo.
 
 ## Endpoint
 
